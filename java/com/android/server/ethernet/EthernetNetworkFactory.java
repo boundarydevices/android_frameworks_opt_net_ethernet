@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 The Android Open Source Project
+ * Copyright (C) 2015 Freescale Semiconductor, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,7 +73,7 @@ import java.io.PrintWriter;
 class EthernetNetworkFactory {
     private static final String NETWORK_TYPE = "Ethernet";
     private static final String TAG = "EthernetNetworkFactory";
-    private static final int NETWORK_SCORE = 70;
+    private static final int NETWORK_SCORE = 150;
     private static final boolean DBG = true;
 
     /** Tracks interface changes. Called from NetworkManagementService. */
