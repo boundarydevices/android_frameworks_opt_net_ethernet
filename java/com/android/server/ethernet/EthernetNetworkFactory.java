@@ -199,7 +199,12 @@ class EthernetNetworkFactory {
             return false;
 
         Log.d(TAG, "Started tracking interface " + iface);
-        setInterfaceUp(iface);
+        try {
+            setInterfaceUp(iface);
+        } catch (IllegalStateException e) {
+            Log.e(TAG, e.toString() + " (Ethernet IF abnormal)");
+            return false;
+        }
         return true;
     }
 
