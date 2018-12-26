@@ -183,6 +183,8 @@ public class EthernetNetworkFactory extends NetworkFactory {
         NetworkInterfaceState network = mTrackingInterfaces.get(iface);
         if (network != null) {
             network.setIpConfig(ipConfiguration);
+            network.stop();
+            network.start();
         }
     }
 
